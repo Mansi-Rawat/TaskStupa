@@ -4,7 +4,12 @@
         <item>New York</item>
         <item>Los Angeles</item>
         <item>Chicago</item>
-        <!-- Add more city options as needed -->
+        <item>India</item>
+        <item>South Africa</item>
+        <item>America</item>
+        <item>Africa</item>
+        <item>United State</item>
+        <item>Chicago</item>
     </string-array>
 
 </resources>

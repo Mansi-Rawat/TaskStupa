@@ -18,7 +18,7 @@ class RegisterViewModel(private val userDao: UserDao) : ViewModel() {
             name.isBlank() -> false
             !Patterns.PHONE.matcher(phoneNumber).matches() -> false
             !Patterns.EMAIL_ADDRESS.matcher(email).matches() -> false
-            password.length < 6 -> false
+            password.length < 3 -> false
             else -> true
         }
         _isFormValid.value = isValid

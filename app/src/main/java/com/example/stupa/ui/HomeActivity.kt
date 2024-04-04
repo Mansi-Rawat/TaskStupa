@@ -27,7 +27,7 @@ class HomeActivity : AppCompatActivity() {
         val viewPager: ViewPager2 = findViewById(R.id.viewPager)
         val tabLayout: TabLayout = findViewById(R.id.tabLayout)
 
-        val tabNames = arrayListOf("Tab 1", "Tab 2", "Tab 3")
+        val tabNames = arrayListOf("Stupa 1", "Stupa 2", "Stupa 3")
         val pagerAdapter = UserPagerAdapter(this, tabNames)
         viewPager.adapter = pagerAdapter
 

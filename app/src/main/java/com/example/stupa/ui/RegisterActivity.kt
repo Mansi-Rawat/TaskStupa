@@ -24,7 +24,7 @@ class RegisterActivity : AppCompatActivity() {
         userDao = AppDatabase.getInstance(application).userDao()
 
         val viewModelFactory = RegisterViewModelFactory(userDao)
-        viewModel = ViewModelProvider(this, viewModelFactory).get(RegisterViewModel::class.java)
+        viewModel = ViewModelProvider(this, viewModelFactory)[RegisterViewModel::class.java]
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_register)
         binding.viewModel = viewModel
@@ -43,7 +43,7 @@ class RegisterActivity : AppCompatActivity() {
             val city = binding.spinnerCity.selectedItem.toString()
 
             if (name.isBlank() || phoneNumber.isBlank() || email.isBlank() || password.isBlank() || city.isBlank()) {
-                Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Please fill in all fields and password must be at least 3 characters long,and email must be in a valid format", Toast.LENGTH_SHORT).show()
             } else {
                 viewModel.validateForm(name, phoneNumber, email, password)
             }
@@ -69,6 +69,7 @@ class RegisterActivity : AppCompatActivity() {
         val isSaved = viewModel.saveUserToDatabase(name, phoneNumber, email, password, city)
         if (isSaved) {
             Toast.makeText(this, "User is registered", Toast.LENGTH_SHORT).show()
+            finish()
         } else {
             Toast.makeText(this, "Failed to save user data", Toast.LENGTH_SHORT).show()
         }

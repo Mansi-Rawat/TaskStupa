@@ -32,7 +32,7 @@ class TabFragment : Fragment() {
         val adapter = UserAdapter()
         recyclerView.adapter = adapter
 
-        userViewModel = ViewModelProvider(requireActivity()).get(UserViewModel::class.java)
+        userViewModel = ViewModelProvider(requireActivity())[UserViewModel::class.java]
 
         userViewModel.userList.observe(viewLifecycleOwner, Observer { userList ->
             Log.d("TabFragment", "Received user list: $userList")

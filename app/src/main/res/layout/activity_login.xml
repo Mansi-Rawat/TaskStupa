@@ -1,4 +1,5 @@
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
         <variable
@@ -7,7 +8,6 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#120C13"
@@ -18,14 +18,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/stu_Pa"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
+            android:textColor="#C63507"
+            android:textSize="25sp"
+            android:textAllCaps="true"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="42dp"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginTop="42dp"/>
 
         <LinearLayout
             android:id="@+id/buttonsLayout"
@@ -43,12 +43,12 @@
                 android:id="@+id/btnLogin"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/login"
-                android:textColor="#FFFFFF"
-                android:background="@drawable/rounded_button_primary"
+                android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"/>
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button_primary"
+                android:text="@string/login"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/btnSignup"
@@ -59,9 +59,7 @@
                 android:textColor="#FFFFFF"
                 android:background="@drawable/rounded_button_primary"
                 android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-
-                />
+                android:layout_marginEnd="8dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -69,13 +67,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginTop="50dp"
             android:gravity="center"
             android:background="@drawable/rounded_button_primary"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/buttonsLayout"
-            android:layout_marginTop="80dp"
-            android:layout_marginBottom="8dp">
+            app:layout_constraintBottom_toTopOf="@+id/buttonLogin">
 
             <EditText
                 android:id="@+id/editTextEmail"
@@ -139,4 +137,3 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
-
