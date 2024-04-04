@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Stupa</string>
+    <string name="stu_Pa">Stu_Pa Technologie</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign up</string>
+    <string name="signup">Sign_Up\n</string>
+    <string name="register">Register Page\n</string>
+    <string name="re_gister">Register</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="name">Name</string>
+</resources>

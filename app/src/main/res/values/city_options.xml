@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cities">
+        <item>New York</item>
+        <item>Los Angeles</item>
+        <item>Chicago</item>
+        <!-- Add more city options as needed -->
+    </string-array>
+
+</resources>
